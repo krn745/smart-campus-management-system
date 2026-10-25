@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>creative Campus | Students</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2 class="brand">🎓 creative Campus</h2>
+      <p class="nav-label">MAIN MENU</p>
+      <nav>
+        <a class="nav-link" href="index.html">▦ Dashboard</a>
+        <a class="nav-link active" href="students.html">♙ Students</a>
+        <a class="nav-link" href="departments.html">▤ Departments</a>
+        <a class="nav-link" href="settings.html">⚙ Settings</a>
+      </nav>
+      <div class="sidebar-bottom">Campus Management System</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Student Management</h1>
+          <p>Register, search and manage student records.</p>
+        </div>
+        <a class="button" href="index.html">← Dashboard</a>
+      </header>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <p>Total Registered Students</p>
+          <h2 id="totalStudents">0</h2>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>Add New Student</h2>
+        <form id="studentForm">
+          <div class="form-grid">
+            <label>Student Name
+              <input id="name" placeholder="Enter full name" required>
+            </label>
+            <label>Roll Number
+              <input id="rollNo" placeholder="Enter roll number" required>
+            </label>
+            <label>Department
+              <select id="department" required>
+                <option value="">Choose department</option>
+                <option>Information Technology</option>
+                <option>Computer Science</option>
+                <option>Electronics</option>
+                <option>Electrical Engineering</option>
+                <option>Mechanical Engineering</option>
+                <option>Civil Engineering</option>
+              </select>
+            </label>
+          </div>
+          <button class="button" type="submit">+ Add Student</button>
+          <p id="message" role="status"></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <h2>Registered Students</h2>
+            <p>All saved student records</p>
+          </div>
+          <input id="search" type="search"
+            placeholder="Search students...">
+        </div>
+
+        <p id="loading" role="status">Loading students...</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Department</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

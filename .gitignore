@@ -1,0 +1,9 @@
+
+node_modules/
+campus.db
+campus.db-shm
+campus.db-wal
+.env
+.env.*
+!.env.example
+uploads/

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Smart Campus</title><link rel="stylesheet" href="/style.css"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head>
+<body><div class="app-shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">SC</span><span>Smart Campus<small>Management Portal</small></span></a><nav>
+<a href="/" data-nav="index.html">▦ <span>Dashboard</span></a>
+<a href="/students.html" data-nav="students.html">♙ <span>Students</span></a>
+<a href="/departments.html" data-nav="departments.html">▤ <span>Departments</span></a>
+<a href="/faculty.html" data-nav="faculty.html">♟ <span>Faculty</span></a>
+<a href="/marks.html" data-nav="marks.html">▥ <span>Marks & Results</span></a>
+<a href="/attendance.html" data-nav="attendance.html">✓ <span>Attendance</span></a>
+<a href="/fees.html" data-nav="fees.html">₹ <span>Fee Management</span></a>
+<a href="/notices.html" data-nav="notices.html">♧ <span>Notices</span></a>
+<a href="/reports.html" data-nav="reports.html">▥ <span>Reports & Analytics</span></a>
+<a href="/settings.html" data-nav="settings.html">⚙ <span>Settings</span></a>
+</nav><div class="sidebar-bottom"><div class="admin-avatar">A</div><div class="admin-name"><strong id="sidebarUsername">Admin</strong><small>Administrator</small></div><button id="logoutButton" class="logout-button" type="button" title="Log out">↪</button></div></aside><main class="main-content"><header class="topbar"><div><span class="eyebrow">CAMPUS ADMINISTRATION</span><h1 id="pageTitle">Dashboard</h1></div><div class="topbar-right"><span class="status-pill"><i></i> System active</span><span id="todayLabel" class="muted"></span></div></header><section class="page-content">
+<div class="welcome-panel"><div><span class="eyebrow light">CAMPUS OVERVIEW</span><h2>Welcome back, Administrator</h2><p>Manage student life and campus operations from one place.</p></div><div class="welcome-icon">✦</div></div>
+<div class="stats-grid">
+<article class="stat-card"><div class="stat-icon blue">♙</div><span>Total students</span><strong id="totalStudents">—</strong><small>Registered student records</small></article>
+<article class="stat-card"><div class="stat-icon violet">▤</div><span>Departments</span><strong id="totalDepartments">—</strong><small>Student departments</small></article>
+<article class="stat-card"><div class="stat-icon green">♟</div><span>Faculty members</span><strong id="totalFaculty">—</strong><small>Registered faculty</small></article>
+<article class="stat-card"><div class="stat-icon amber">✓</div><span>Attendance rate</span><strong id="attendanceRate">0%</strong><small>Present or late records</small></article>
+</div>
+<div class="content-grid"><article class="panel"><div class="panel-heading"><div><h3>Student distribution</h3><p>Students by department</p></div></div><div class="chart-wrap"><canvas id="departmentChart"></canvas><p id="chartEmpty" class="empty-state">Add students to see the chart.</p></div></article>
+<article class="panel"><div class="panel-heading"><div><h3>Fee overview</h3><p>Recorded fee payments</p></div></div><div class="fee-overview"><div><span>Total fees</span><strong id="feeTotal">₹0</strong></div><div><span>Collected</span><strong id="feePaid" class="success-text">₹0</strong></div><div><span>Pending</span><strong id="feePending" class="warning-text">₹0</strong></div></div><a class="text-link" href="/fees.html">Manage fees →</a></article></div>
+<div class="content-grid"><article class="panel"><div class="panel-heading"><div><h3>Recently registered students</h3><p>Latest records in the system</p></div><a class="text-link" href="/students.html">View all →</a></div><div class="table-wrap"><table><thead><tr><th>Student</th><th>Roll number</th><th>Department</th><th>Percentage</th></tr></thead><tbody id="recentStudents"></tbody></table></div></article>
+<article class="panel"><div class="panel-heading"><div><h3>Top performers</h3><p>Highest recorded percentage</p></div><a class="text-link" href="/reports.html">Reports →</a></div><div id="topStudents" class="performer-list"><p class="empty-state">No student data yet.</p></div></article></div>
+<div class="quick-grid"><a class="quick-card" href="/students.html"><span>＋</span><strong>Add student</strong><small>Create a student bio profile</small></a><a class="quick-card" href="/marks.html"><span>▥</span><strong>Enter marks</strong><small>Record subjects and results</small></a><a class="quick-card" href="/attendance.html"><span>✓</span><strong>Take attendance</strong><small>Record daily attendance</small></a><a class="quick-card" href="/notices.html"><span>♧</span><strong>Post notice</strong><small>Share campus updates</small></a></div>
+</section></main></div><div id="toast" class="toast" role="status"></div><script src="/app.js"></script></body></html>
